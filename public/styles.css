@@ -18,6 +18,24 @@ body {
   border-color: white;
 }
 
+.App-content {
+  display: flex;
+}
+
+table {
+  /* display: inline-block; */
+  float: right;
+}
+
+.App-side-content {
+  justify-content: right;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: 0;
+  height: 410px;
+  width: 300px;
+}
+
 .last_operator_display,
 .display {
   background-color: #1d1d22;
@@ -40,12 +58,36 @@ body {
   border-bottom-right-radius: 7px;
 }
 
+.mini-display {
+  padding: 0;
+  background-color: #1d1d22;
+  height: 10px;
+  width: 120px;
+  text-align: right;
+  padding-right: 3px;
+  font-size: 18px;
+}
+
+table .delete-bttn,
+table .recover-bttn {
+  height: 30px;
+  width: 30px;
+  font-size: 12px;
+  color: black;
+  background-color: #787878;
+}
+
 .comma-bttn,
 .result-bttn,
 .clear-bttn,
+.recover-bttn,
 .delete-bttn,
 .number-bttn,
-.operation-bttn {
+.operation-bttn,
+.clearallmemories-bttn,
+.recoverlastmemory-bttn,
+.memoryplus-bttn,
+.memorysave-bttn {
   display: block;
   height: 60px;
   width: 60px;
@@ -59,7 +101,11 @@ body {
 .clear-bttn:hover,
 .delete-bttn:hover,
 .number-bttn:hover,
-.operation-bttn:hover {
+.operation-bttn:hover,
+.clearallmemories-bttn:hover,
+.recoverlastmemory-bttn:hover,
+.memoryplus-bttn:hover,
+.memorysave-bttn:hover {
   border-color: rgba(236, 234, 234, 0.459);
 }
 
@@ -68,13 +114,26 @@ body {
 .clear-bttn:focus,
 .delete-bttn:focus,
 .number-bttn:focus,
-.operation-bttn:focus {
+.operation-bttn:focus,
+.clearallmemories-bttn:focus,
+.recoverlastmemory-bttn:focus,
+.memoryplus-bttn:focus,
+.memorysave-bttn:focus {
   outline: none;
+}
+
+.clearallmemories-bttn,
+.recoverlastmemory-bttn,
+.memoryplus-bttn,
+.memorysave-bttn {
+  color: black;
+  background-color: #787878;
 }
 
 .comma-bttn,
 .result-bttn,
 .clear-bttn,
+.recover-bttn,
 .delete-bttn {
   background-color: #464646;
   color: #000000;
@@ -92,10 +151,11 @@ body {
   display: grid;
   padding-top: 18px;
   grid-template-columns: repeat(4, 65px);
-  grid-template-rows: repeat(5, 64px);
+  grid-template-rows: repeat(6, 64px);
   align-items: center;
   width: 260px;
   grid-template-areas:
+    "MC MR Mplus MS"
     "clear delete times divide"
     "sete oito nove minus"
     "quatro cinco seis plus"
@@ -118,6 +178,30 @@ body {
   -ms-transform: scale(1.4, 1); /* IE 9 */
   -o-transform: scale(1.4, 1); /* Opera */
   transform: scale(1.4, 1); /* W3C */
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #656564;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #787878;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #f2a23c;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 #times {
@@ -186,4 +270,17 @@ body {
   grid-area: equal;
   height: 120px;
   border-radius: 55px;
+}
+
+#MC {
+  grid-area: MC;
+}
+#MR {
+  grid-area: MR;
+}
+#Mplus {
+  grid-area: Mplus;
+}
+#MS {
+  grid-area: MS;
 }
