@@ -1,0 +1,189 @@
+body {
+  color: #949399;
+  background-image: linear-gradient(225deg, black, #1d1d22);
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  height: 100vh;
+}
+
+.App {
+  box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 2em;
+  padding: 18px;
+  justify-content: center;
+  align-items: center;
+  border-color: white;
+}
+
+.last_operator_display,
+.display {
+  background-color: #1d1d22;
+  height: 40px;
+  width: 257px;
+  text-align: right;
+  padding-right: 3px;
+  font-size: 26.5px;
+}
+
+.last_operator_display {
+  height: 32px;
+  font-size: 24px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.display {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.comma-bttn,
+.result-bttn,
+.clear-bttn,
+.delete-bttn,
+.number-bttn,
+.operation-bttn {
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.794);
+}
+.comma-bttn:hover,
+.result-bttn:hover,
+.clear-bttn:hover,
+.delete-bttn:hover,
+.number-bttn:hover,
+.operation-bttn:hover {
+  border-color: rgba(236, 234, 234, 0.459);
+}
+
+.comma-bttn:focus,
+.result-bttn:focus,
+.clear-bttn:focus,
+.delete-bttn:focus,
+.number-bttn:focus,
+.operation-bttn:focus {
+  outline: none;
+}
+
+.comma-bttn,
+.result-bttn,
+.clear-bttn,
+.delete-bttn {
+  background-color: #464646;
+  color: #000000;
+}
+
+.number-bttn {
+  background-color: #656564;
+}
+
+.operation-bttn {
+  background-color: #f2a23c;
+}
+
+.calc_buttons {
+  display: grid;
+  padding-top: 18px;
+  grid-template-columns: repeat(4, 65px);
+  grid-template-rows: repeat(5, 64px);
+  align-items: center;
+  width: 260px;
+  grid-template-areas:
+    "clear delete times divide"
+    "sete oito nove minus"
+    "quatro cinco seis plus"
+    "um dois tres equal"
+    "zero zero point equal";
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#delete {
+  grid-area: delete;
+}
+
+.stretched {
+  display: inline-block;
+  -webkit-transform: scale(1.4, 1); /* Safari and Chrome */
+  -moz-transform: scale(1.4, 1); /* Firefox */
+  -ms-transform: scale(1.4, 1); /* IE 9 */
+  -o-transform: scale(1.4, 1); /* Opera */
+  transform: scale(1.4, 1); /* W3C */
+}
+
+#times {
+  grid-area: times;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#sete {
+  grid-area: sete;
+}
+
+#oito {
+  grid-area: oito;
+}
+
+#nove {
+  grid-area: nove;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#quatro {
+  grid-area: quatro;
+}
+
+#cinco {
+  grid-area: cinco;
+}
+
+#seis {
+  grid-area: seis;
+}
+
+#plus {
+  grid-area: plus;
+}
+
+#um {
+  grid-area: um;
+}
+
+#dois {
+  grid-area: dois;
+}
+
+#tres {
+  grid-area: tres;
+}
+
+#zero {
+  grid-area: zero;
+  width: 120px;
+  border-radius: 55px;
+}
+
+#point {
+  grid-area: point;
+}
+
+#equal {
+  grid-area: equal;
+  height: 120px;
+  border-radius: 55px;
+}
